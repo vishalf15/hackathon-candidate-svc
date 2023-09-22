@@ -14,8 +14,8 @@ import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 
-/*@Configuration
-@EnableDynamoDBRepositories(basePackages = "com.s4s.charity.voteregistrationsvc.repositories")*/
+@Configuration
+@EnableDynamoDBRepositories(basePackages = "com.s4s.charity.candidatesvc.repositories")
 public class DynamoDBConfig {
 
     @Value("${amazon.dynamodb.endpoint}")
@@ -29,7 +29,8 @@ public class DynamoDBConfig {
     
     @Autowired
     private ApplicationContext context;
-
+    
+    
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
         AmazonDynamoDB amazonDynamoDB = new AmazonDynamoDBClient(amazonAWSCredentials());
