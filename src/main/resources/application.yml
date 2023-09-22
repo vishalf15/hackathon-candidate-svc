@@ -3,8 +3,8 @@ logging:
     org:
       springframework: INFO
 server:
-  port: 8086
+  port: 8080
 spring:
   application:
-    name: Candidaye-Info-Svc  
+    name: candidate-svc
 
